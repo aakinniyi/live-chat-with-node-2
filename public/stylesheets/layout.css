@@ -1,0 +1,233 @@
+body{
+  margin:0 auto;
+  font-family: Helvetica, Geneva, sans-serif;
+  font-size: small;
+  font-color: #000;
+}
+
+/*Header Styling*/
+header{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #daa520;
+}
+    header h1, h2, p{ text-align: center;
+    color: #ffffff;
+    padding-top: 0.2em }
+
+/*Menu Styling*/
+
+/*Strip the ul of padding and list styling*/
+ul {
+  list-style-type:none;
+  margin:auto;
+  padding:0;
+  position: absolute;
+}
+
+li {
+  display:inline-block;
+  float: left;
+  margin-right: 1px;
+}
+
+/*Style for menu links*/
+li a {
+  display:block;
+  min-width:140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background: #2f3036;
+  text-decoration: none;
+}
+
+li:hover a {
+  background: #990012;
+}
+
+/*Style for dropdown links*/
+li:hover ul a {
+  background: #f3f3f3;
+  color: #2f3036;
+  height: 40px;
+  line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+  background: #990012;
+  color: #fff;
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+  display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+  display: block;
+  float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+  width: auto;
+  min-width: 100px;
+  padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hide, .hide:hover {
+  display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: #990012;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+
+.map-box {
+  width: 280px;
+  margin: 30px auto 0;
+  padding: 10px;
+  background-color: #fff;
+  -webkit-box-shadow:  0px 0px 5px 1px rgba(0, 0, 0, .15);
+  box-shadow:  0px 0px 5px 1px rgba(0, 0, 0, .15);
+}
+.map-box #map {
+  width: 280px;
+  height: 280px;
+}
+
+section{
+  float: left;
+  width: 65%;
+  padding-right: 2em;
+  padding-left: 2em;
+  padding-top: 3em;
+}
+
+aside{
+  float: right;
+  width: 25%;
+  padding-right: 2em;
+  padding-left: 2em;
+  padding-top: 3em;
+}
+aside h1, h2, h3{
+  text-align: center;
+  padding-top: 2em;
+}
+
+footer{
+  width:100%;
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  background-color: #daa520;
+  bottom:0px;
+  position:fixed;
+}
+
+#container {
+margin: 0 auto 0 auto;
+max-width: 90%;
+padding: 4em 1.5em 1.3em 1.5em;
+}
+
+video {
+  margin: 0 0.5em 1.5em 0;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  background: #222;
+  width: 45%;
+}
+
+button {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #2b2b2b);
+  background-image: -moz-linear-gradient(top, #000000, #2b2b2b);
+  background-image: -ms-linear-gradient(top, #000000, #2b2b2b);
+  background-image: -o-linear-gradient(top, #000000, #2b2b2b);
+  background-image: linear-gradient(to bottom, #000000, #2b2b2b);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #fff;
+  font-size: 1em;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #fc3c3c;
+  text-decoration: none;
+}
+
+
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 760px){
+  /*Make dropdown links appear inline*/
+  ul {
+    position: static;
+    display: none;
+  }
+  /*Create vertical spacing*/
+  li {
+    margin-bottom: 1px;
+  }
+  ul li, li a {
+    width: 100%;
+  }
+  /*Display 'show menu' link*/
+  .show-menu {
+    display:block;
+  }
+
+  aside.sidebar {
+        width: 80%;
+    }
+
+#localVideo, #removeVideo {
+max-width: 100%;
+display: block;
+width: 95%;
+}
+
+button {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 0.4em;
+  padding: 3px;
+  }
+}
+
+
